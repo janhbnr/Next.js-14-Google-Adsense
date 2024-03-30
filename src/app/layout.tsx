@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import AdSense from "../../components/AdSense";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <AdSense pId="ca-pub-1234567890123456"/>
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
